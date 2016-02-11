@@ -5,10 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= link_to "To-Do List", root_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to 'Novo', new_ticket_path, class: "btn btn-lg btn-primary" %>
 </head>
 <body>
 
 <%= yield %>
+<footer class="footer">
+  <a class="navbar-right btn btn-lg btn-primary" href="https://github.com/JhonattasFerreira/to_to_list">Saiba Mais!!!</a>
+</footer>
 
 </body>
 </html>

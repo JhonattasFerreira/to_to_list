@@ -1,0 +1,11 @@
+<h1 class="center">Home Page</h1>
+<h2>Listas de coisas a se fazer:</h2>
+<% @tickets.each do |ticket| %>
+    <div class="nav jumbotron">
+        <h3><%= ticket.title %></h3>
+        <h4><%= format_date(ticket.date_end)%></h4>
+        <h5><%= ticket.description %></h5>
+        <%= link_to 'Editar', edit_ticket_path(ticket), class: "navbar-right btn btn-lg btn-primary" %>
+        <%= link_to 'Feito', ticket, method: :delete, data: { confirm: 'Você tem certeza?' }, class: "navbar-right btn btn-lg btn-primary" %>
+    </div>
+<% end %>
